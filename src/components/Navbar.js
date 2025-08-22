@@ -99,14 +99,14 @@ export default function Navbar() {
           {session ? (
             <button
               onClick={() => signOut({ callbackUrl: '/' })}
-              className="w-full text-left cursor-pointer block text-white px-4 py-2 rounded-md hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
+              className="w-full text-left cursor-pointer block  bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
             >
               Logout
             </button>
           ) : (
             <Link
               href="/login"
-              className="w-full cursor-pointer block text-white px-4 py-2 rounded-md hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
+              className="w-full cursor-pointer block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
             >
               Login
             </Link>
