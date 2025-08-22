@@ -7,7 +7,7 @@ export default async function ProductsPage() {
 
   const highlightProducts = await db
     .collection('products')
-    .find()
+    .find({highlight: true })
     .toArray()
   // const products = await db.collection('products').find({}).toArray()
 

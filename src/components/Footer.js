@@ -1,3 +1,6 @@
+import Link from 'next/link'
+import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react'
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300 pt-12 pb-6 mt-10">
@@ -16,24 +19,24 @@ export default function Footer() {
           <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li>
-              <a href="/" className="hover:text-blue-500 transition">
+              <Link href="/" className="hover:text-blue-500 transition">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/products" className="hover:text-blue-500 transition">
+              <Link href="/products" className="hover:text-blue-500 transition">
                 Products
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/about" className="hover:text-blue-500 transition">
+              <Link href="/about" className="hover:text-blue-500 transition">
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/contact" className="hover:text-blue-500 transition">
+              <Link href="/contact" className="hover:text-blue-500 transition">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -45,24 +48,24 @@ export default function Footer() {
           </h3>
           <ul className="space-y-2">
             <li>
-              <a href="/faq" className="hover:text-blue-500 transition">
+              <Link href="/faq" className="hover:text-blue-500 transition">
                 FAQ
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/returns" className="hover:text-blue-500 transition">
+              <Link href="/returns" className="hover:text-blue-500 transition">
                 Returns & Refunds
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/shipping" className="hover:text-blue-500 transition">
+              <Link href="/shipping" className="hover:text-blue-500 transition">
                 Shipping Info
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/privacy" className="hover:text-blue-500 transition">
+              <Link href="/privacy" className="hover:text-blue-500 transition">
                 Privacy Policy
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -78,30 +81,30 @@ export default function Footer() {
 
           {/* Social Links */}
           <div className="flex justify-center md:justify-start space-x-4 mt-3">
-            <a
+            <Link
               href="#"
               className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-700 hover:bg-blue-600 transition"
             >
-              <i className="fab fa-facebook-f"></i>
-            </a>
-            <a
+              <Facebook className="w-5 h-5 text-white" />
+            </Link>
+            <Link
               href="#"
               className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-700 hover:bg-blue-400 transition"
             >
-              <i className="fab fa-twitter"></i>
-            </a>
-            <a
+              <Twitter className="w-5 h-5 text-white" />
+            </Link>
+            <Link
               href="#"
               className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-700 hover:bg-pink-500 transition"
             >
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a
+              <Instagram className="w-5 h-5 text-white" />
+            </Link>
+            <Link
               href="#"
               className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-700 hover:bg-red-600 transition"
             >
-              <i className="fab fa-youtube"></i>
-            </a>
+              <Youtube className="w-5 h-5 text-white" />
+            </Link>
           </div>
         </div>
       </div>
