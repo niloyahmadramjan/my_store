@@ -2,9 +2,11 @@ import Link from 'next/link'
 import clientPromise from '../lib/mongodb'
 
 export default async function ProductsPage() {
+  // mongodb connection and get products data
   const client = await clientPromise
   const db = client.db('mystore')
-  const products = await db.collection('products').find({}).toArray()
+  const products = await db.collection('products').find({}).toArray();
+  
   return (
     <main className="max-w-6xl mx-auto px-6 py-12">
       <h1 className="text-3xl font-bold text-center mb-10">All Products</h1>

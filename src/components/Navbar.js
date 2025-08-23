@@ -5,7 +5,9 @@ import { Menu, X } from 'lucide-react'
 import { signOut, useSession } from 'next-auth/react'
 
 export default function Navbar() {
+  //For Mobile menu open and close
   const [isOpen, setIsOpen] = useState(false)
+  // nextauth session data
   const { data: session } = useSession()
 
   return (

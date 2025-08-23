@@ -1,7 +1,7 @@
 import NextAuth from 'next-auth'
 import GoogleProvider from 'next-auth/providers/google'
 
-// 🔹 Export authOptions so it can be imported elsewhere
+//  Export authOptions for import anywhere
 export const authOptions = {
   providers: [
     GoogleProvider({

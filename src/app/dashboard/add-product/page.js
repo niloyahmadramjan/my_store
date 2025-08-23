@@ -5,18 +5,20 @@ import { redirect } from 'next/navigation'
 
 export default async function AddProductPage() {
   const session = await requireAuth()
-
+  // if not user then redirect to login page
   if (!session) {
     redirect('/login')
   }
 
-  // server action
+  // add products function
   async function addProduct(formData) {
     'use server'
+    // form data 
     const name = formData.get('name')
     const description = formData.get('description')
     const price = parseFloat(formData.get('price'))
 
+    //  add products to  mongoDB 
     try {
       const client = await clientPromise
       const db = client.db('mystore')
@@ -30,8 +32,6 @@ export default async function AddProductPage() {
         user: session.user.email,
       })
 
-      // ✅ server থেকে safe redirect
-      // return redirect('/products')
     } catch (err) {
       console.error('Error inserting product:', err)
       throw new Error('Database insert failed')

@@ -2,14 +2,14 @@ import clientPromise from '@/app/lib/mongodb'
 import Link from 'next/link'
 
 export default async function ProductsPage() {
+  // MongoDB connection and get highlightProducts only
   const client = await clientPromise
   const db = client.db('mystore')
 
   const highlightProducts = await db
     .collection('products')
     .find({highlight: true })
-    .toArray()
-  // const products = await db.collection('products').find({}).toArray()
+    .toArray();
 
   return (
     <main className="max-w-6xl mx-auto px-6 py-12">

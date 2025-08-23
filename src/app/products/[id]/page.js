@@ -6,8 +6,7 @@ export default async function ProductDetails({ params }) {
   const { id } = await params  
   const client = await clientPromise
   const db = client.db('mystore')
-
-  // params.id string, এটাকে ObjectId বানাতে হবে
+// use param id to get specific data findone
   const product = await db.collection('products').findOne({
     _id: new ObjectId(id),
   })
